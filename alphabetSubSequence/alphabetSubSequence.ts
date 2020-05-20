@@ -9,9 +9,11 @@ function alphabetSubsequence(s: string): boolean {
 
     //Set keeps only unique values
     let copy = new Set(sCodes) 
-    
+
     let sorted = [...sCodes].sort( (a, b) => a - b)
- 
+    console.log(sCodes.join(','))
+    console.log(sorted.join(','))
+
      if(copy.size !== sCodes.length ||  sCodes.join(',') !== sorted.join(',')) {
         return false
     }
