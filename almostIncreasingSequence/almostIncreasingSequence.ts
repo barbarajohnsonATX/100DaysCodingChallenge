@@ -8,10 +8,8 @@ function almostIncreasingSequence(sequence: number[]): boolean {
             incorrect++;
         }
     }
-        if(incorrect > 1) {
-            return false;
-        }
-        return true;
+        //return true if incorrect is 1 or 0, false if 2 or more
+        return incorrect < 2
 
 }
 
