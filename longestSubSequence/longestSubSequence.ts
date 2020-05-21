@@ -6,6 +6,7 @@ function longestSubSequence(s1: string, s2: string): string {
 
     let n2Start = 0
      for(let i = 0; i < S1.length; i++) {
+         //adjust second string start 
         for(let j = n2Start; j < S2.length; j++) {
             if(S1[i] === S2[j]) {
                 result1.push(S2[j])
