@@ -1,4 +1,8 @@
 function areSimilar(a: number[], b: number[]): boolean {
+
+    const aString = a.sort().toString();
+    const bString = b.sort().toString();
+     return aString === bString
    
 }
 
