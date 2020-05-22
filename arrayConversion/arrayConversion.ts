@@ -1,31 +1,24 @@
 function arrayConversion(inputArray: number[]): number {
-     let nSize = inputArray.length;
-     let iter = false
-     let res; 
-
-
-     while(inputArray.length > 1) {
-        let ptr = 0
-
-        while(ptr <  nSize ) {
-            res = iter ? inputArray[0] * inputArray[1] :inputArray[0] + inputArray[1]
-            inputArray.push(res)
-            inputArray.shift()
-            inputArray.shift()
-            console.log(inputArray)    
-            ptr += 2
+      let iter = false
+     
+ 
+    while (inputArray.length > 1) {
+        iter  = !iter 
+        let test = []
+         for(let i = 0; i < inputArray.length - 1; i+=2){
+            let res = iter ? inputArray[i] + inputArray[i+1]: inputArray[i] * inputArray[i+1]
+            test.push(res)
         }
 
-        iter = !iter
- 
+        inputArray = test
         console.log(inputArray)
-        nSize = inputArray.length
- 
-    }
+            
+     }
+
     
-    
-     
     return inputArray[0]
 }
 
+
 console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8]));
+ 
