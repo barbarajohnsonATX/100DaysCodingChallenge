@@ -2,23 +2,14 @@ function chunkyMonkey(arr: any[], size: number): any[][] {
 
     //[1, 2, 3, 4, 5], size
     //loop size times and push values into array
-    //increment i by 2
+    //increment i by size
 
-    let ptr = 0;
     let newArray = [];
 
-    for(let i = ptr; i < arr.length ; i += size) {
-        let newSubArray = []
-
-        for(let j = i; j < i + size; j++) {
-            if(arr[j] !== undefined) {
-                newSubArray.push(arr[j])
-            }
-        }
-        
-         console.log(newSubArray)
-         newArray.push(newSubArray)
-     }
+    for(let i = 0; i < arr.length ; i += size) {
+        //push value at i and value before i + size
+        newArray.push(arr.slice(i, i + size))
+      }
 
     console.log(newArray)
     return newArray
