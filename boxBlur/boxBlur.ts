@@ -10,15 +10,15 @@ function boxBlur(image: number[][]): number[][] {
 
         for(let j = 0 ; j < image[0].length ; j++) {
 
-            console.log(i, j)
+            //console.log(i, j)
 
             for(let k = 0; k < image[0][0].length; k++) {
                 console.log(j, k)
                 console.log(image[i][j][k])
                 sum += image[i][j][k]
-                console.log(sum)
+               // console.log(sum)
                 count++
-                console.log(count)
+               // console.log(count)
 
             }
             console.log(sum)
@@ -36,8 +36,8 @@ function boxBlur(image: number[][]): number[][] {
  }
 
  const x = [ 
-     [[1,1,1], [1,7,1], [1, 1, 1]],
-     [[1,1,1], [1,7,1], [1, 1, 1]],
+     [[1,1,1], [1,7,1], [1, 1, 1]], //3x3
+     [[1,1,1], [1,7,1], [1, 1, 1]], //3x3
 
     ]
 
