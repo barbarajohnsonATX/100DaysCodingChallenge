@@ -11,7 +11,7 @@ function companyBotStrategy(trainingData: number[][]): number {
     console.log(correct)
 
     let total = correct.reduce( (accum,current) =>  accum + current[0] , 0)                      
-    return (correct.length > 0 ? (total/correct.length).toFixed(1): 0);
+    return total/correct.length.toFixed(1) || 0
 
  
 }
