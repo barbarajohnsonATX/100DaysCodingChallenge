@@ -12,25 +12,22 @@ function commonCharacterCount(s1: string, s2: string): number {
         s2Obj[c] = s2Obj[c]+ 1 || 1;
     }
 
-    console.log(s1Obj, s2Obj)
-
     let s1Keys = Object.keys(s1Obj)
-    let s2Keys = Object.keys(s2Obj)
+     
+    let common = []
+    for(let key of s1Keys) {
+         if(s2Obj.hasOwnProperty(key)) {
+             common.push(key)
+         }
+        
+    }
+     console.log(common)
 
-   let common = s1Keys.map( s1Key => {
-       return s2Keys.find(s2Key => s1Key === s2Key) 
-    }).filter(elem => elem !== undefined)
-  
-
-   console.log(common)
 
    let count = 0;
    for(let i = 0; i < common.length; i++) {
        count = count + Math.min(s1Obj[common[i]], s2Obj[common[i]])
    }
-   
-   console.log(count)
-    
    
    return count
 
