@@ -2,8 +2,7 @@ function makeArrayConsecutive2(statues: number[]): number {
 
     // 6, 2, 3, 8
     //sort 2, 3, 6, 8
-    //compare first two, while (second is not first + 1), push second to missing
-    //if second is first + 1, compare = second number
+    //find next value in sorted. if not found, push to missing array
     let missing = [];
     let sorted = statues.sort( (a, b) => a - b);
  
