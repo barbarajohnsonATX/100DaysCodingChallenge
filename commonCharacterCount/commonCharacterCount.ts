@@ -24,13 +24,11 @@ function commonCharacterCount(s1: string, s2: string): number {
 
    console.log(common)
 
-   let i = 0;
    let count = 0;
-
-   while(i < common.length) {
+   for(let i = 0; i < common.length; i++) {
        count = count + Math.min(s1Obj[common[i]], s2Obj[common[i]])
-       i++;
    }
+   
    console.log(count)
     
    
@@ -40,3 +38,4 @@ function commonCharacterCount(s1: string, s2: string): number {
 
 console.log(commonCharacterCount('aabcc', 'adcaa'));
 console.log(commonCharacterCount('aabccef', 'fadcaab'));
+console.log(commonCharacterCount('zbc', 'zbcc'));
