@@ -1,6 +1,6 @@
 function confirmEnding(str: string, target: string) {
   
-     return target  === str.substring(str.length - target.length, str.length) 
+     return target  === str.substr(str.length - target.length, str.length) 
    
 }
 
