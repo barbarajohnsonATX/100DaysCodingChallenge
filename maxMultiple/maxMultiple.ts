@@ -1,6 +1,6 @@
 function maxMultiple(divisor: number, bound: number): number  {
 
-    let start = bound;
+/*     let start = bound;
     while(start) {
         
         if(start % divisor === 0) {
@@ -8,7 +8,18 @@ function maxMultiple(divisor: number, bound: number): number  {
         }
         start--
 
+    } */
+
+    if(bound % divisor === 0) {
+        return bound;
+    } else {
+        bound--;
+        return maxMultiple(divisor, bound);
+
     }
+
+
+
 }
 
 console.log(maxMultiple(3,10));
