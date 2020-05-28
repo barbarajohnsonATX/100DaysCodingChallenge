@@ -1,6 +1,6 @@
 function maxMultiple(divisor: number, bound: number): number  {
 
-    let start = bound - 1;
+    let start = bound;
     while(start) {
         
         if(start % divisor === 0) {
